@@ -10,12 +10,15 @@ html:not(footer),body{
       color: white ;
       background-color:  hsl(218, 28%, 13%);
       font-family: Open-Sans , Verdana, Geneva, Tahoma, sans-serif;
-
+      scroll-behavior: smooth;
 }
 
 h1 , h2, h3{
       text-align: center;
       font-family: Raleway , Verdana, Geneva, Tahoma, sans-serif;
+}
+h2{
+      font-size: 18px;
 }
 a{
       text-decoration: none;
@@ -24,7 +27,8 @@ li{
       list-style: none;
 }
 section{
-      margin: 8em 2em;
+      margin: 8em 0em;
+      padding: 0 6vw;
 
 }
 .header{
@@ -59,7 +63,7 @@ section{
 }
 
  .logo-container .logo{
-      width: 25vw;
+      width: 97.5px;
       height: 2em;
 }
 .header-primary{
@@ -116,6 +120,11 @@ section{
       gap: 2em;
    
 }
+.section-description{
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+}
 .section img{
       height: 15em ;
       width: 70vw;
@@ -124,7 +133,7 @@ section{
 }
 
 .section a{
-      border-bottom: 20px solid hsl(198, 60%, 50%);
+      /* border-bottom: 2px solid hsl(198, 60%, 50%); */
       /* padding-bottom: 1em; */
       
       color: hsl(198, 60%, 50%);
@@ -212,7 +221,7 @@ section{
 footer{
      
       background-color: hsl(216, 53%, 9%);
-      padding: 15em 2em 0;
+      padding: 15em 6vw 0;
     
 }
 
@@ -251,5 +260,102 @@ footer{
       
 }
 
-.attribution { font-size: 11px; text-align: center; }
+
+@media  (min-width : 1024px){
+
+     
+      .header-primary{
+            padding-bottom: 17em;
+      }
+      .header-primary img{
+            width: 40vw;
+      }
+      .header-main{
+            background-image: url('/images/bg-curvy-desktop.svg');
+            background-size:100% 100%;
+            top: -21em;
+            /* padding: 0 5em; */
+      }
+
+      .header-main h1 , .header-main p{
+            padding:0 20vw;
+      }
+
+      .features-container{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 0;
+      }
+      .features-container div{
+            width: 30vw;
+      }
+
+      .section{
+            display: flex;
+            flex-direction: row;
+      }
+
+      .section h2{
+            text-align: left;
+      }
+      .section-description{
+            margin-top: 7em;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+      }
+      .section img{
+            height: -webkit-max-content;
+            height: -moz-max-content;
+            height: max-content;
+      }
+
+      .card-section{
+            position: relative;
+            z-index: 2;
+      }
+      .card-container{
+            flex-direction: row; 
+            margin-top: 2em; 
+      }
+      .quote{
+            top: 1em;
+            position: absolute;
+            z-index: 1;
+      }
+
+      .contact-container{
+            margin: 0 15vw;
+      }
+      .contact-div{
+            flex-direction: row;
+      }
+      .contact-div input{
+            flex:2
+      }
+      .contact-div button{
+            flex:1
+      }
+
+      .footer-container{
+            flex-direction: row;
+            gap: 3em;
+            justify-content: space-evenly;
+      }
+
+      .footer-location{
+            flex: 1.5;
+      }
+
+
+
+
+}
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; padding: 3em 0; }
     .attribution a { color: hsl(228, 45%, 44%); }
